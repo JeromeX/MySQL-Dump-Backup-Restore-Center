@@ -6,7 +6,7 @@
 
 <ins>Requirements</ins>:
 
-Windows 10/11 x64
+Windows 10/11 and Server variants from 2019 | x64 BIT
 
 minimum .NET Framework 4.6
 
