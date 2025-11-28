@@ -31,3 +31,4 @@ Restore any MySQL database (overwrite or if not exists creates database)
 Fetches the databases, once you entered your creds correctly
 
 Let you view any action in current log file --> saved in database for historic reasons
+<img width="986" height="773" alt="2025-11-28 22_08_37-MySQL Dump DB Backup _ Restore Center 🛢 _ v10 35" src="https://github.com/user-attachments/assets/b844b87d-2f12-4210-9843-bb30db008ac7" />
