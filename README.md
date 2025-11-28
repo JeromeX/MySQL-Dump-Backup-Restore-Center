@@ -10,6 +10,24 @@ Windows 10/11 x64
 
 minimum .NET Framework 4.6
 
-70MB Harddisk Space
+70MB Harddisk Space, less RAM
 
 Administrator rights
+
+Features in this release:
+------------------------
+German & English language
+
+Creates a Desktop Button for quick access
+
+Automatic detects "mysqldump"
+
+creates 2 SQLlite Databases (1x encrypted for saved creds) (1x for saving logs and paths)
+
+Backup any mysql database
+
+Restore any MySQL database (overwrite or if not exists creates database)
+
+Fetches the databases, once you entered your creds correctly
+
+Let you view any action in current log file --> saved in database for historic reasons
