@@ -10,11 +10,11 @@ Windows 10/11 and Server variants from 2019 | x64 BIT
 
 minimum .NET Framework 4.6
 
-70MB Harddisk Space, less RAM
+35MB Harddisk Space, less RAM needed
 
 Administrator rights
 
-Features in this release:
+<ins>Features in this release</ins>:
 ------------------------
 German & English language
 
@@ -31,4 +31,12 @@ Restore any MySQL database (overwrite or if not exists creates database)
 Fetches the databases, once you entered your creds correctly
 
 Let you view any action in current log file --> saved in database for historic reasons
+
+<ins>Installation</ins>:
+
+1. extract the Package
+2. run the installer
+3. open Application from Desktop
+4. for futher instruction,see my video on Youtube here:
+
 <img width="986" height="773" alt="2025-11-28 22_08_37-MySQL Dump DB Backup _ Restore Center 🛢 _ v10 35" src="https://github.com/user-attachments/assets/b844b87d-2f12-4210-9843-bb30db008ac7" />
