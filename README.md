@@ -37,6 +37,6 @@ Let you view any action in current log file --> saved in database for historic r
 1. extract the Package
 2. run the installer
 3. open Application from Desktop
-4. for futher instruction,see my video on Youtube here:
+4. for futher instruction,see my video on Youtube here: https://youtu.be/W80PCJQkuAs
 
 <img width="986" height="773" alt="2025-11-28 22_08_37-MySQL Dump DB Backup _ Restore Center 🛢 _ v10 35" src="https://github.com/user-attachments/assets/b844b87d-2f12-4210-9843-bb30db008ac7" />
