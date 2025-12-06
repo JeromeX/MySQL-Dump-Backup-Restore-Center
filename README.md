@@ -1,42 +1,72 @@
-**A Graphical and swiss knive tool for backing up and restoring MySQL databases.**
-**A GUI frontend for mysqldump featuring ZIP compression, encrypted configuration storage, and an integrated log viewer.**
-**Idea comeing up for backup and restore Databases in a simply way, specially useing Programs like Piwigo as a true Photo Source**
+# 🛡️ MySQL Backup, Restore & DB-Admin Center
 
-**Fully written in C# - compiled as a .exe to keep it simple**
+![Version](https://img.shields.io/badge/version-27.0-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows_x64-lightgrey.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Built With](https://img.shields.io/badge/Built_with-.NET_8-purple.svg)
 
-<ins>Requirements</ins>:
+A modern, lightweight **WPF tool** for easy management of MySQL databases. It allows you to create backups (dumps), restore databases, and create or delete databases via a user-friendly graphical interface.
 
-Windows 10/11 and Server variants from 2019 | x64 BIT
+---
 
-minimum .NET Framework 4.6
+## ✨ Features
 
-35MB Harddisk Space, less RAM needed
+* **🚀 One-Click Backup:** Creates SQL dumps and automatically compresses them into `.zip` files.
+* **♻️ Easy Restore:** Restores databases directly from `.sql` or `.zip` files.
+* **🛠️ Database Admin:**
+    * `[NEW DB]` Create new databases (automatically sets charset to `utf8mb4_general_ci`).
+    * `[DELETE DB]` Delete databases (includes a double security confirmation prompt).
+* **🌍 Multi-Language:** The entire interface can be switched between **English** and **German** on the fly.
+* **📜 Logging:** Detailed log system (SQLite-based) with a built-in log viewer.
+* **🔒 Security:** Passwords are stored encrypted using Windows DPAPI.
+* **🎨 Modern UI:** Clean Dark Mode design with neon accents.
 
-Administrator rights
+---
 
-<ins>Features in this release</ins>:
-------------------------
-German & English language
+## 📥 Installation & Usage
 
-Creates a Desktop Button for quick access
+### Prerequisites
+1.  **Windows 10/11** (64-Bit).
+2.  **.NET Desktop Runtime 8.0** (usually installed via Windows Update, otherwise [download here](https://dotnet.microsoft.com/download/dotnet/8.0)).
+3.  **mysqldump.exe:** This file must be present on your PC (it is part of installation).
 
-Automatic detects "mysqldump"
+### Getting Started
+1.  Use installer.
+2.  Run the application.
 
-creates 2 SQLlite Databases (1x encrypted for saved creds) (1x for saving logs and paths)
+---
 
-Backup any mysql database
+## 📖 Quick Start Guide
 
-Restore any MySQL database (overwrite or if not exists creates database)
+### 1. Configuration (Important!)
+On the first launch, you must configure the connection:
+1.  Enter **Host** (e.g., `127.0.0.1`), **Port**, **User**, and **Password**.
+2.  Select the path to `mysqldump.exe` and your desired Backup Directory.
+3.  **IMPORTANT:** Click on **[ Save & Test ]**.
+4.  Only *after* saving successfully can you select your database from the dropdown menu.
 
-Fetches the databases, once you entered your creds correctly
+### 2. Create Backup
+* Select the desired database.
+* Click on **[ BACKUP ]** (or **[ CREATE BACKUP ]**).
+* The tool generates a ZIP file in your target folder (Format: `backup_DBNAME_YYYY-MM-DD_HH-mm.zip`).
 
-Let you view any action in current log file --> saved in database for historic reasons
+### 3. Manage Databases
+* **Create:** Click the green **[ NEW DB ]** button. Enter a name, and the database will be created immediately with `utf8mb4` encoding.
+* **Delete:** Click the red **[ DELETE DB ]** button to drop the currently selected database (irreversible!).
 
-<ins>Installation</ins>:
+---
 
-1. extract the Package
-2. run the installer
-3. open Application from Desktop
-4. for futher instruction,see my video on Youtube here: https://youtu.be/W80PCJQkuAs
+## 🧩 Technology Stack
 
-<img width="986" height="773" alt="2025-11-28 22_08_37-MySQL Dump DB Backup _ Restore Center 🛢 _ v10 35" src="https://github.com/user-attachments/assets/b844b87d-2f12-4210-9843-bb30db008ac7" />
+* **Language:** C# (WPF)
+* **Framework:** .NET 8.0 (Windows)
+* **Database (Internal):** SQLite (via `Microsoft.Data.Sqlite`)
+* **Design:** Custom Dark Theme (XAML)
+
+---
+
+## ⚖️ License & Copyright
+
+This project is Open Source.
+
+© 2025 by Malte Speck
