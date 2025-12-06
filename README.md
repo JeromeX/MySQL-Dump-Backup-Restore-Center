@@ -2,7 +2,7 @@
 **A GUI frontend for mysqldump featuring ZIP compression, encrypted configuration storage, and an integrated log viewer.**
 **Idea comeing up for backup and restore Databases in a simply way, specially useing Programs like Piwigo as a true Photo Source**
 
-**Fully written in Powershell - compiled as a .exe to keep it simple**
+**Fully written in C# - compiled as a .exe to keep it simple**
 
 <ins>Requirements</ins>:
 
