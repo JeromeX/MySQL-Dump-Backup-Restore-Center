@@ -1,0 +1,41 @@
+**🔧 Troubleshooting: Connection & Permission Errors**
+If you cannot connect to your database (Errors 10061, 1130, etc.), the issue is usually caused by the configuration of the Linux/MariaDB Server, not the script itself.
+
+**1. Error: 10061 (Connection Refused)**
+Symptom: The script cannot reach the server at all. Cause: The MySQL/MariaDB server is configured to listen only on localhost (127.0.0.1). Solution:
+
+Open the configuration file on your Linux server:
+
+MariaDB: sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+
+MySQL: sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf (or /etc/mysql/my.cnf)
+
+Find the line bind-address = 127.0.0.1.
+
+Change it to: bind-address = 0.0.0.0
+
+Restart the service:
+
+sudo systemctl restart mariadb
+# or
+sudo systemctl restart mysql
+2. Error: 1130 (Host '...' is not allowed to connect)
+Symptom: The network connection works, but the server rejects the user. Cause: The database user (e.g., root) is restricted to local connections only. Solution:
+
+Log in to the database locally on your server:
+
+sudo mariadb -u root -p
+Allow remote access for your user (replace YourPassword):
+
+**SQL**
+
+-- Allow root access from ANY IP address (%)
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'YourPassword' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+Note: For better security, consider creating a dedicated backup user instead of using root remotely.
+
+**3. Firewall (UFW)**
+If you still cannot connect, ensure port 3306 is open:
+
+sudo ufw allow 3306/tcp
+sudo ufw reload
